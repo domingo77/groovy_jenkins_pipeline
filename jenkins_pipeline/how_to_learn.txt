@@ -1,0 +1,65 @@
+based on Groovy syntax.
+This is useful web.
+1, github:
+   https://github.com/jenkinsci/
+
+2, org web:
+   https://plugins.jenkins.io/
+   https://plugins.jenkins.io/ui/search?query=pipeline
+
+3, jenkins plugin: pipeline
+    https://plugins.jenkins.io/workflow-aggregator/
+    https://github.com/jenkinsci/workflow-aggregator-plugin
+    https://github.com/jenkinsci/pipeline-plugin
+    https://github.com/jenkinsci/configuration-as-code-plugin
+    https://plugins.jenkins.io/workflow-cps/
+    https://plugins.jenkins.io/extended-choice-parameter/
+    https://github.com/jenkinsci/pipeline-model-definition-plugin/
+    https://github.com/jenkinsci/pipeline-model-definition-plugin/wiki
+    https://wiki.jenkins.io/display/JENKINS/ProcessTreeKiller
+    https://github.com/jenkinsci/allure-plugin
+    https://plugins.jenkins.io/allure-jenkins-plugin/
+
+5, twitter
+    https://twitter.com/hashtag/JenkinsPipeline
+    https://devops.com/how-to-use-the-jenkins-pipelines/
+    https://www.jenkins.io/doc/book/managing/script-approval/#groovy-sandbox
+
+6, jenkins-pipeline tag on StackOverflow
+   https://stackoverflow.com/tags/jenkins-pipeline
+
+7, javadoc.jenkins.io
+   https://javadoc.jenkins.io
+
+8, ci.jenkins.io
+   https://ci.jenkins.io
+   https://wiki.jenkins.io/#all-updates
+My Proposal:
+    First,please see this page first:
+    https://www.jenkins.io/doc/book/pipeline/
+    understand:
+    .1 Jenkinsfile two type of syntax: Declarative  and Scripted
+       Declarative: pipeline block
+       Scripted:    node block
+    .2 Pipeline concepts
+       pipeline(block): Declarative
+                        All valid Declarative Pipelines must be enclosed within a pipeline block, for example:
+       node(block): Scripted
+       stage:
+              stage blocks are optional in Scripted Pipeline syntax
+              implementing stage blocks in a Scripted Pipeline provides clearer visualization of each `stage¡¯s subset of tasks/steps in the Jenkins UI.
+       step: a single task.
+
+   secondly, pipeline syntax:
+   https://www.jenkins.io/doc/book/pipeline/syntax/
+   .1 basic statement and expressions which  are valid in Declarative Pipeline follow the same rule as Groovy's syntax with the execption below:
+      .1 top level must be a block, specifically: pipeline { }
+      .2 no semicolons as statement seperator, each statement has to be on its own line.
+      .3 Blocks must only consist of Sections, Directive, Steps, or  assignment statements.
+      .4 a property reference statement is treated as a no-argument method invocation. for example, input is treated as input()
+   .1 section/directive required by jenkinsfile
+      sections in Declarative contain one or more Directives or Steps.
+          .1 agent: required.
+   .2 pelease see the template in directory jenkins_template
+   .3 parallel:
+      https://jenkins.io/blog/2017/09/25/declarative-1/

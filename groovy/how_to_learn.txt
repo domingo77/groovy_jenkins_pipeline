@@ -1,0 +1,35 @@
+1, org web:
+   http://groovy-lang.org/documentation.html
+
+2, github repository
+   git clone https://github.com/apache/groovy.git
+
+3, groovy syntax:
+   http://groovy-lang.org/syntax.html
+
+4, groovy opeartor:
+   http://groovy-lang.org/operators.html
+
+5, groovy structure:
+   http://groovy-lang.org/structure.html
+
+6, Documentation for all Groovy versions
+  http://docs.groovy-lang.org/docs/groovy-3.0.3/html/
+Index of /docs/groovy-3.0.3/html
+[ICO]	Name	Last modified	Size	Description
+[PARENTDIR]	Parent Directory	 	-
+[DIR]	api/	2020-04-07 16:21 	-
+[DIR]	documentation/	2020-04-07 16:19 	-
+[DIR]	gapi/	2020-04-07 16:20 	-
+[DIR]	groovy-jdk/	2020-04-07 16:19 	-
+Apache/2.4.29 (Ubuntu) Server at docs.groovy-lang.org Port 80
+
+you can find the API from directory api and groovy-jdk
+
+7, groovy and json
+http://www.groovy-lang.org/json.html#_customizing_output
+http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf
+
+8, json editor
+ https://github.com/jdorn/json-editor
+ https://www.cnblogs.com/handk/p/4766271.html

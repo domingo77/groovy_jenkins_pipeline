@@ -1,0 +1,5 @@
+1, chijianqiang
+   https://www.cnblogs.com/chijianqiang/archive/2012/11/06/vim-3.html
+   https://github.com/wincent/command-t/blob/master/doc/command-t.txt
+2, config template
+   https://blog.csdn.net/learning_and_doing/article/details/9059891

@@ -1,0 +1,2 @@
+1, reference web:
+   https://devops.stackexchange.com/questions/1473/running-a-background-process-in-pipeline-job

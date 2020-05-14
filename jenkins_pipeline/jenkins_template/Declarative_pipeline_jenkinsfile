@@ -1,0 +1,77 @@
+// Jenkinsfile (Declarative pipeline)
+// section in Declarative Pipeline contain one or more Directives and Steps(not section, but specific step.)
+pipeline {// required: yes
+    /* insert Declarative pipeline here */
+    agent {//Section, required: yes
+    /* in the top-level pipeline block and each stage block*/
+
+    }//agent
+    stages {//Section, required: yes
+    /*only once, inside the pipeline block(top-level)*/
+    /*contains a sequence of  one or more stage directives.*/
+        stage('build') {// Directive, required: at least one, parameter: one mandatory, stage name.
+            /*inside the stages section*/
+            /*Note: a stage must have "one and only one" of steps(section), stages(sections), parallel(section) or matrix()*/
+            // only one steps(section)
+            steps {// seciton, required: yes
+                /*inside each stage block*/
+                /*all available steps(not section,but all specific steps) documented in   */
+                $step_cmd parameter_1: "", parameter_2 ""
+                //or another statement:
+                $step_cmd parameter_1: "",
+                          parameter_2 ""
+                //or another statement:
+                $step_cmd(parameter_1: "", parameter_2 "")
+                /*steps(not section, but specific step) which are supported only in Declarative Pipeline*/
+                script {// step(not section, but specific step)
+                    /*block of Scripted Pipeline(groovy synta) and execute that in Declarative Pipeline*/
+                    //groovy syntax
+                    //if/else
+                    //try/catch/finally
+                }
+
+            }// steps
+            // or only one parallel()
+            parallel {// required: no
+                /*not allowed: parallel { stage('name') { parallel {} } } (no parallel within parallel )*/
+                /*allowed: parallel { stage('name') { agent/tools/when etc funtionality} }*/
+
+            }// parallel
+            // or only one stages()
+            stages {
+
+            }// stages
+
+        } // stage
+
+    }// stages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    post{//Section, required: no
+    /*in the top-level pipeline block and each stage block*/
+    /*run upon the completion of a Pipeline's or stage's run.
+        always {//post-conditon blocks contains steps(specifix) same as steps(section)
+        /* steps(not section,but all specific steps.like the steps inside steps section)*/
+
+        }//always
+
+    }//post
+}//pipeline
