@@ -1,0 +1,18 @@
+1, getops
+   #!/bin/bash
+   #OPTIND=1
+   echo "OPTIND=$OPTIND"
+   while getopts ":a:b:c" opt
+   do
+       case "$opt" in
+           h|help)
+               ;;
+           a)
+               a_argument=$OPTARG
+               echo "OPTIND=$OPTIND"
+               ;;
+           \?)
+               ;;
+       esac
+   done
+   shift $(($OPTIND -1))
